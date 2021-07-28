@@ -12,6 +12,7 @@ public class FlipkartSignIn {
 		driver.manage().window().maximize();
 
 		driver.get("https://www.flipkart.com/");
+		driver.quit();
 	}
 
 }
