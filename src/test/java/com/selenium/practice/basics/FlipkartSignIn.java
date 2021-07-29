@@ -24,7 +24,9 @@ public class FlipkartSignIn {
 		driver.findElement(By.xpath("//input[@class='_2IX_2- _3mctLh VJZDxU']")).sendKeys("Flipkart@2090");
 		Thread.sleep(4000);
 		driver.findElement(By.xpath("//button[@class='_2KpZ6l _2HKlqd _3AWRsL']")).click();
-		Thread.sleep(20000);
+		Thread.sleep(7000);
+		driver.findElement(By.xpath("//a[@class='_3SkBxJ']")).click();
+		Thread.sleep(5000);
 		driver.quit();
 	}
 
