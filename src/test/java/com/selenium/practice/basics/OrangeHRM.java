@@ -1,9 +1,14 @@
 package com.selenium.practice.basics;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -12,7 +17,7 @@ import org.openqa.selenium.support.ui.Select;
 
 public class OrangeHRM {
 
-	public static void main(String[] args) throws InterruptedException {
+	public static void main(String[] args) throws InterruptedException, IOException {
 		System.setProperty("webdriver.chrome.driver", ".\\src\\test\\resources\\driverExecutables\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
@@ -39,7 +44,7 @@ public class OrangeHRM {
 		Select slct = new Select(dropdown1);
 		slct.selectByVisibleText("Admin");
 		driver.findElement(By.id("systemUser_employeeName_empName")).sendKeys("Orange Test");
-		driver.findElement(By.id("systemUser_userName")).sendKeys("User5");
+		driver.findElement(By.id("systemUser_userName")).sendKeys("User7");
 			
 		WebElement dropdown2 = driver.findElement(By.id("systemUser_status"));
 		Select slct1 = new Select(dropdown2);
@@ -54,14 +59,18 @@ public class OrangeHRM {
 		Thread.sleep(3000);
 		driver.findElement(By.id("systemUser_confirmPassword")).sendKeys("!234@TestRR##1");
 		System.out.println("Correct password");
-		//driver.findElement(By.id("btnSave")).click();
+		
+		File ss = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		FileUtils.copyFile(ss, new File("./Screenshots/Imag1.png"));
+		
 		driver.findElement(By.xpath("//input[@name='btnSave']")).click();
 		//driver.findElement(By.xpath("//input[@name='btnCancel']")).click();
 		System.out.println("User Created");
-		driver.findElement(By.id("searchSystemUser_userName")).sendKeys("User5");
+		driver.findElement(By.id("searchSystemUser_userName")).sendKeys("User7");
 		System.out.println("Typed the above created UserName");
 		driver.findElement(By.xpath("//input[@name='_search']")).click();
 		System.out.println("Searching");
+		
 		Thread.sleep(5000);
 		driver.close();
 	}
