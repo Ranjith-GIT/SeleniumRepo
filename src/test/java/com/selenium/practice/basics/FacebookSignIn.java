@@ -14,21 +14,18 @@ public class FacebookSignIn {
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
 
-		driver.get("https://www.facebook.com/");
-		driver.getTitle();
-		System.out.println("Title is " + driver.getTitle());
-
-		driver.findElement(By.id("email")).sendKeys("ranjithkumarr.33@gmail.com");
-		driver.findElement(By.id("pass")).sendKeys("test1234");
-		Thread.sleep(5000);
-		driver.findElement(By.name("login"));
-
-		Thread.sleep(15000);
-		System.out.println("Before Closing");
-		Thread.sleep(15000);
+		driver.get("https://www.facebook.com/");		
+		driver.findElement(By.partialLinkText("English")).click();
+		Thread.sleep(3000);
+		driver.findElement(By.partialLinkText("Create")).click();
+		Thread.sleep(3000);
+		
+		/*driver.findElement(By.name("firstname")).sendKeys("Ranj");
+		driver.findElement(By.name("lastname")).sendKeys("KMRS");
+		driver.findElement(By.xpath("//input[@id='u_3_g_tA']")).sendKeys("8431819415");
+		driver.findElement(By.xpath("//input[@id='password_step_input']")).sendKeys("Pass@2090");*/
+		
 		driver.close();
-		System.out.println("After Closing");
-
 	}
 
 }

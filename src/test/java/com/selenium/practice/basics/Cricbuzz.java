@@ -16,14 +16,27 @@ public class Cricbuzz {
 		
 		driver.get("https://www.cricbuzz.com/");
 		Thread.sleep(4000);
-		System.out.println("Before Clicking");
-		driver.findElement(By.id("search_bar_menu")).sendKeys("Dravid");
+		
+		//driver.findElement(By.id("search_bar_menu")).sendKeys("Dravid");
+		driver.findElement(By.id("search_bar_menu")).sendKeys("Kumble");
 		Actions act = new Actions(driver);
 		act.sendKeys(Keys.ENTER).build().perform();
-		Thread.sleep(6000);
+		Thread.sleep(5000);
 		System.out.println("Print "+ driver.getTitle());
-		System.out.println("After Clicking");
-		driver.quit();
+		//driver.findElement(By.xpath("//a[@title='Rahul Dravid']")).click();
+		driver.findElement(By.xpath("//a[@title='Anil Kumble']")).click();
+		System.out.println(driver.getTitle());
+		if (driver.getTitle().equals("Rahul Dravid Profile - ICC Ranking, Age, Career Info & Stats | Cricbuzz.com")) {
+			System.out.println("Player is Rahul Dravid");
+		}
+		else if (driver.getTitle().equals("Anil Kumble Profile - ICC Ranking, Age, Career Info & Stats | Cricbuzz.com")) {
+			System.out.println("Player is Anil Kumble");
+		}
+		else {
+			System.out.println("Unknown Player");
+		}
+		
+		//driver.quit();
 		
 	}
 
