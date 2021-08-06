@@ -71,7 +71,7 @@ public class OrangeHRM_Admin_JOB {
 		//Screenshot 2 - After Adding JOB Title
 		File ss3 = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 		FileUtils.copyFile(ss3, new File("./Screenshots/AfterScrollingDown.png"));
-		
+				
 		String expectedResult = "A6:Senior Test Automation Engineer 1";
 		String actualResult = driver.findElement(By.linkText("A6:Senior Test Automation Engineer 1")).getText();
 		System.out.println("Actual Result is: "+actualResult);
