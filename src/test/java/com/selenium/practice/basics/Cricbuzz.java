@@ -36,7 +36,7 @@ public class Cricbuzz {
 			System.out.println("Unknown Player");
 		}
 		
-		//driver.quit();
+		driver.close();
 		
 	}
 
