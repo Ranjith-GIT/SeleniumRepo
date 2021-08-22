@@ -2,43 +2,23 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-07-29T00:34:24 IST" name="Default suite" finished-at="2021-07-29T00:34:29 IST" duration-ms="4254">
+  <suite started-at="2021-08-22T01:14:47 IST" name="Default suite" finished-at="2021-08-22T01:14:56 IST" duration-ms="8693">
     <groups>
     </groups>
-    <test started-at="2021-07-29T00:34:24 IST" name="Default test" finished-at="2021-07-29T00:34:29 IST" duration-ms="4254">
+    <test started-at="2021-08-22T01:14:47 IST" name="Default test" finished-at="2021-08-22T01:14:56 IST" duration-ms="8693">
       <class name="com.selenium.TestNG.TestNGGoogle">
-        <test-method signature="TestGoogle()[pri:0, instance:com.selenium.TestNG.TestNGGoogle@be35cd9]" started-at="2021-07-29T00:34:24 IST" name="TestGoogle" finished-at="2021-07-29T00:34:29 IST" duration-ms="4165" status="FAIL">
-          <exception class="org.openqa.selenium.InvalidArgumentException">
+        <test-method signature="TestGoogle()[pri:0, instance:com.selenium.TestNG.TestNGGoogle@44821a96]" started-at="2021-08-22T01:14:47 IST" name="TestGoogle" finished-at="2021-08-22T01:14:56 IST" duration-ms="8645" status="FAIL">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[invalid argument
-  (Session info: chrome=92.0.4515.107)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-F2SB4TR', ip: '192.168.0.5', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.107, chrome: {chromedriverVersion: 92.0.4515.43 (8c61b7e2989f2..., userDataDir: C:\Users\Ranjith\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:60238}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 7f303ac7dfda6d432cf740bb32c1bfac]]>
+              <![CDATA[The following asserts failed:
+expected [https://www.w3schools.com/default.sp] but found [https://www.w3schools.com/default.asp]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.InvalidArgumentException: invalid argument
-  (Session info: chrome=92.0.4515.107)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-F2SB4TR', ip: '192.168.0.5', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.107, chrome: {chromedriverVersion: 92.0.4515.43 (8c61b7e2989f2..., userDataDir: C:\Users\Ranjith\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:60238}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 7f303ac7dfda6d432cf740bb32c1bfac
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
-at com.selenium.TestNG.TestNGGoogle.TestGoogle(TestNGGoogle.java:15)
+              <![CDATA[java.lang.AssertionError: The following asserts failed:
+expected [https://www.w3schools.com/default.sp] but found [https://www.w3schools.com/default.asp]
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:47)
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:31)
+at com.selenium.TestNG.TestNGGoogle.TestGoogle(TestNGGoogle.java:29)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -69,7 +49,7 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.InvalidArgumentException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestGoogle -->
